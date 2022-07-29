@@ -43,33 +43,33 @@
 //
 //    return 0;
 //}
+
+//int main(){
+//    ios_base::sync_with_stdio(0);
+//    cin.tie(0);
+//    ll K, N, ans=0;
+//    cin >> N >> K;
+//    vector<ll> s(N);
 //
-////int main(){
-////    ios_base::sync_with_stdio(0);
-////    cin.tie(0);
-////    ll K, N, ans=0;
-////    cin >> N >> K;
-////    vector<ll> s(N);
-////
-////    for(int i = 0; i < N; ++i){
-////        cin >> s[i];
-////    }
-////
-////    sort(begin(s), end(s));
-////
-////    int i = 0, r = 1;
-////    ll diff;
-////
-////    while(i < N-1){
-////        diff = s[i+1]-s[i];
-////        int rangeCount = 1;
-////
-////        while(diff <= K){
-////            ++ans;
-////            diff = s[i+rangeCount++] - s[i];
-////        }
-////        ++i;
-////    }
-////    cout << ans;
-////    return 0;
-////}
+//    for(int i = 0; i < N; ++i){
+//        cin >> s[i];
+//    }
+//
+//    sort(begin(s), end(s));
+//
+//    int i = 0, r = 1;
+//    ll diff;
+//
+//    while(i < N-1){
+//        diff = s[i+1]-s[i];
+//        int rangeCount = 1;
+//
+//        while(diff <= K){
+//            ++ans;
+//            diff = s[i+rangeCount++] - s[i];
+//        }
+//        ++i;
+//    }
+//    cout << ans;
+//    return 0;
+//}
