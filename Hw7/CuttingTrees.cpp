@@ -18,7 +18,6 @@
 //
 //    vector<int> s(N);
 //
-//
 //    for(int i = 0; i < N; ++i){
 //        cin >> s[i];
 //    }
@@ -31,6 +30,9 @@
 //
 //        if(value >= X && ans < mid) {
 //            ans = mid;
+//            if(value == X){
+//                break;
+//            }
 //        }
 //        if (value > X)
 //            low = mid + 1;
