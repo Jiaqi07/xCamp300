@@ -1,10 +1,12 @@
 //#include <iostream>
 //#include <vector>
 //#include <algorithm>
+//
+//using ll = long long;
 //using namespace std;
 //
-//int choppedWood(vector<int> trees, int curVal, int N){
-//    int amount = 0;
+//ll choppedWood(vector<ll> trees, ll curVal, ll N){
+//    ll amount = 0;
 //
 //    while(N != -1 && trees[--N] > curVal){
 //        amount += trees[N]-curVal;
@@ -13,23 +15,24 @@
 //}
 //
 //int main(){
-//    int N, X;
+//    ll N, X;
 //    cin >> N >> X;
 //
-//    vector<int> s(N);
+//    vector<ll> s(N);
 //
-//    for(int i = 0; i < N; ++i){
+//    for(ll i = 0; i < N; ++i){
 //        cin >> s[i];
 //    }
 //
 //    sort(s.begin(), s.end());
 //
-//    int low = 0, high = s[N-1], ans = -1e9;
+//    ll low = 0, high = s[N-1], ans = -1e9;
 //    while (low <= high) {
-//        int mid = low+(high-low)/2, value = choppedWood(s, mid, N);
+//        ll mid = low+(high-low)/2, value = choppedWood(s, mid, N);
 //
 //        if(value >= X && ans < mid) {
 //            ans = mid;
+////            cout << ans << ' ';
 //            if(value == X){
 //                break;
 //            }

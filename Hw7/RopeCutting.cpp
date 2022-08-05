@@ -1,15 +1,17 @@
-//#include <iostream>
-//#include <algorithm>
 //#include <iomanip>
-////#include <bits/stdc++.h> Missing lib i guess for set precision
+//#include <cstdio>
+//#include <cmath>
+//#include <iostream>
+////#include <bits/stdc++.h>
+////Missing lib i guess for set precision
 //using namespace std;
 //
 //using ll = long long;
 //ll N, M;
-//float s[1000001];
+//double s[1000001];
 //
-//bool check(float mid){
-//    int sum = 0;
+//bool check(double mid){
+//    ll sum = 0;
 //    for(int i = 1; i <= N; ++i){
 //        sum += int(s[i]/mid);
 //    }
@@ -18,14 +20,14 @@
 //
 //int main() {
 //    cin >> N >> M;
-//    float range = 0;
+//    double range = 0;
 //    for(ll i = 1; i <= N; ++i){
-//        cin >> s[i];
+//        scanf("%lf", &s[i]);
 //        range += s[i];
 //    }
 //
-//    float l=0, r=range, mid;
-//    for(int i = 0; i < 100; i++){
+//    double l=0, r=range, mid;
+//    for(ll i = 0; i < 100; i++){
 //        mid = l+(r-l)/2;
 //        if(check(mid)){
 //            l=mid;
@@ -37,44 +39,81 @@
 //}
 ////#include <iostream>
 ////#include <algorithm>
-////#include <vector>
+////#include <iomanip>
+//////#include <bits/stdc++.h> Missing lib i guess for set precision
 ////using namespace std;
 ////
-////double ropeCutting(vector<double> rope, double curVal, int N){
-////    double amount = 0;
+////using ll = long long;
+////ll N, M;
+////double s[1000001];
 ////
-////    while(N != 0 && rope[--N] > curVal){
-////        amount += rope[N]-curVal;
+////bool check(double mid){
+////    ll sum = 0;
+////    for(int i = 1; i <= N; ++i){
+////        sum += int(s[i]/mid);
 ////    }
-////    return amount;
+////    return sum >= M;
 ////}
 ////
-////int main(){
-////    int N, K;
-////    cin >> N >> K;
-////
-////    vector<double> s(N);
-////
-////    for(int i = 0; i < N; i++){
+////int main() {
+////    cin >> N >> M;
+////    double range = 0;
+////    for(ll i = 1; i <= N; ++i){
 ////        cin >> s[i];
+////        range += s[i];
 ////    }
-////    sort(s.begin(), s.end());
 ////
-////    int l = 0, r = N-1;
-////    double ans = -1e9;
-////    while(l <= r){
-////        int mid = l+(r-l)/2;
-////        double value = ropeCutting(s, mid, N);
-////
-////        if(value >= K && ans < mid) {
-////            ans = mid;
+////    double l=0, r=range, mid;
+////    for(ll i = 0; i < 100; i++){
+////        mid = l+(r-l)/2;
+////        if(check(mid)){
+////            l=mid;
 ////        }
-////        if (value > K)
-////            l = mid + 1;
 ////        else
-////            r = mid - 1;
+////            r=mid;
 ////    }
-////    cout << ans;
-////
-////    return 0;
+////    cout << setprecision(2) << fixed << floor(l*100)/100;
 ////}
+//////#include <iostream>
+//////#include <algorithm>
+//////#include <vector>
+//////using namespace std;
+//////
+//////double ropeCutting(vector<double> rope, double curVal, int N){
+//////    double amount = 0;
+//////
+//////    while(N != 0 && rope[--N] > curVal){
+//////        amount += rope[N]-curVal;
+//////    }
+//////    return amount;
+//////}
+//////
+//////int main(){
+//////    int N, K;
+//////    cin >> N >> K;
+//////
+//////    vector<double> s(N);
+//////
+//////    for(int i = 0; i < N; i++){
+//////        cin >> s[i];
+//////    }
+//////    sort(s.begin(), s.end());
+//////
+//////    int l = 0, r = N-1;
+//////    double ans = -1e9;
+//////    while(l <= r){
+//////        int mid = l+(r-l)/2;
+//////        double value = ropeCutting(s, mid, N);
+//////
+//////        if(value >= K && ans < mid) {
+//////            ans = mid;
+//////        }
+//////        if (value > K)
+//////            l = mid + 1;
+//////        else
+//////            r = mid - 1;
+//////    }
+//////    cout << ans;
+//////
+//////    return 0;
+//////}
